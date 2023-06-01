@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,22 +17,21 @@
       <AnchorPane prefHeight="94.0" prefWidth="630.0" style="-fx-background-color: #191A19;">
          <children>
             <Circle fill="#03c988" layoutX="37.0" layoutY="47.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
-            <Label fx:id="lblUserName" layoutX="103.0" layoutY="14.0" text="text" textFill="WHITE">
+            <Label fx:id="lblUserName" layoutX="103.0" layoutY="14.0" prefHeight="39.0" prefWidth="157.0" text="text" textFill="WHITE">
                <font>
                   <Font name="Agency FB" size="32.0" />
                </font>
             </Label>
-            <Label fx:id="lblDate" layoutX="103.0" layoutY="56.0" text="Label" textFill="WHITE">
+            <Label fx:id="lblDate" layoutX="103.0" layoutY="56.0" prefHeight="29.0" prefWidth="132.0" text="Label" textFill="WHITE">
                <font>
                   <Font name="Agency FB" size="24.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <VBox layoutY="92.0" prefHeight="522.0" prefWidth="630.0" />
       <Separator layoutX="9.0" layoutY="639.0" prefHeight="7.0" prefWidth="615.0" />
-      <JFXTextField focusColor="#03c988" layoutX="84.0" layoutY="646.0" prefHeight="80.0" prefWidth="452.0" promptText="Message" unFocusColor="#03c988" />
-      <ImageView fitHeight="60.0" fitWidth="62.0" layoutX="555.0" layoutY="675.0" pickOnBounds="true" preserveRatio="true">
+      <JFXTextField fx:id="txtMsg" focusColor="#03c988" layoutX="84.0" layoutY="646.0" prefHeight="80.0" prefWidth="452.0" promptText="Message" unFocusColor="#03c988" />
+      <ImageView fitHeight="60.0" fitWidth="62.0" layoutX="555.0" layoutY="675.0" onMouseClicked="#btnSendImgOnClickAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/send%20(1).png" />
          </image>
@@ -39,9 +39,27 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="29.0" fitWidth="39.0" layoutX="14.0" layoutY="686.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="29.0" fitWidth="39.0" layoutX="14.0" layoutY="686.0" onMouseClicked="#btnAtachFileOnClickAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/paper-clip.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ScrollPane fx:id="scrollpane" layoutY="94.0" prefHeight="551.0" prefWidth="630.0" style="-fx-background-color: white;">
+         <content>
+            <VBox fx:id="vBox" prefHeight="529.0" prefWidth="610.0" />
+         </content>
+      </ScrollPane>
+      <ImageView fx:id="img" fitHeight="46.0" fitWidth="75.0" layoutX="84.0" layoutY="672.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/text.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnCancel" fitHeight="46.0" fitWidth="39.0" layoutX="196.0" layoutY="681.0" onMouseClicked="#btnCancelOnClickAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/cancel.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
