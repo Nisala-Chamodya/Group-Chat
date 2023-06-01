@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="702.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.blacky.groupchat.client.controller.ChatLoginFormController">
+<AnchorPane fx:id="pane" prefHeight="702.0" prefWidth="517.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.blacky.groupchat.client.controller.ChatLoginFormController">
    <children>
-      <Label layoutX="223.0" layoutY="63.0" text="Login" />
+      <ImageView fitHeight="498.0" fitWidth="609.0" layoutX="-5.0" layoutY="10.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/LoginBg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="86.0" layoutY="10.0" styleClass="title" stylesheets="@../assets/css/Style.css" text="Play Tec Group Chat" textFill="LIME">
+         <font>
+            <Font name="Bodoni MT Black" size="52.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUserName" focusColor="#10ee09" layoutX="40.0" layoutY="563.0" prefHeight="31.0" prefWidth="535.0" promptText="User Name" unFocusColor="#00ff1e" />
+      <JFXButton layoutX="118.0" layoutY="635.0" onAction="#btnLoginOnAction" prefHeight="40.0" prefWidth="373.0" styleClass="loginbtn" stylesheets="@../assets/css/Style.css" text="Login" textFill="#00ff44">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Baskerville Old Face" size="21.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

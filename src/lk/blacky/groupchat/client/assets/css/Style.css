@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.title{
+    -fx-font-family:'Anton', sans-serif ;
+}
+.loginbtn{
+    -fx-background-color: White;
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+    -fx-border-color: 8px #03C988;
+}
+.loginbtn:hover{
+    -fx-background-color: #03C988;
+    -fx-background-radius: 40px;
+    -fx-border-radius: 40px;
+    -fx-border-color: 3px  WHITE;
+    -fx-text-fill:  #WHITE;
+}
+.sendBtn{
+    -fx-background-color: green;
+}
